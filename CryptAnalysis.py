@@ -1,4 +1,5 @@
 # CryptAnalysis Class
+from VigenereEncryption import mainV
 
 
 asciiLetters = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z', '=', '+', '*']
@@ -22,8 +23,9 @@ def printProp(string, lettersBase, probBase):
 
 
 def main():
-    string = "ALIDOVIADOFIHSGOJHSPOIUFRHWSOR"
-    printProp(string, asciiLetters, asciiProb)
+    str = mainV()
+    print("string received!! \n running crypto analysis: ")
+    printProp(str, asciiLetters, asciiProb)
     
 
 main()
