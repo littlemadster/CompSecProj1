@@ -69,7 +69,7 @@ def decrypt(cipherT, keyS):
     
     
 
-def mainV():
+def mainVig():
     textFile = open_text()
     plainText = textFile
    # print(plainText)
@@ -85,5 +85,5 @@ def mainV():
     
 
 
-mainV()
+mainVig()
 
