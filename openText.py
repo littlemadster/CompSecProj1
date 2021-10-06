@@ -1,13 +1,13 @@
 from os import remove
 
-class one_text():
+class open_text():
     print("opening file...")
 #function to remove spaces string
 def remove(string):
    return "".join(string.replace("\n",""))
         
     #opens and saves file without spaces in a new file
-def one_text():
+def open_text():
     #open original and new files
     text = open("nuDAim.txt", "r")
     newText =open("newFile","w")
@@ -19,5 +19,5 @@ def one_text():
     text.close()
     return file    
     
-one_text()
+open_text()
     
