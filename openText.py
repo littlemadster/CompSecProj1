@@ -1,3 +1,4 @@
+#openText Class
 from os import remove
 
 class open_text():
