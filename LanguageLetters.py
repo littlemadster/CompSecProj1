@@ -14,12 +14,17 @@ class LanguageLetters:
     def openFile():
         
         text = open("nuDAim.txt", "r") # opens file to read
+        textTest = open("testText.txt", "r") # TESTER FILE
         newText =open("newFile","w") # creates new file to write
 
         file = removeSpace(text.read()) # removes spaces
+        fileTest = removeSpace(testText.read()) # TESTER FILE
         print(file, file=newText) 
 
         # closes file
         newText.close() 
+        testText.close() # TESTER FILE
         text.close()
-        return file    
+        
+        return fileTest # TESTER FILE
+        #return file    
