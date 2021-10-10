@@ -4,12 +4,10 @@ Maddie Sirok & Valentina Colorado
 Class that will encrypt & decrypt using the Vigenere Cipher
 """
 
-# asciiLetters = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z', '=', '+', '*']
-
-class Vigenere:
+class VigenereCrypt:
     
     # y = e + k mod 29
-    def encrypt(plainT, keyS): #function takes plaintext letter and key letter
+    def encrypt(plainT, keyS, asciiLetters): #function takes plaintext letter and key letter
         
         plainT = plainT.upper() # makes plaintext all uppercase
         keyS = keyS.upper() # makes key all uppercase
@@ -25,12 +23,14 @@ class Vigenere:
             for i in range(29): # gets ascii numeric for plaintext
                 if asciiLetters[i] == plainT[letter]:
                     plain = i # letter converts to ascii
-            print('plain: ' + str(plain))
+            # prints ascii of letter (TESTING PURPOSES)
+            #print('plain: ' + str(plain))
             
             for j in range(29): # gets ascii numeric for key
                 if asciiLetters[j] == keyS[letter % len(keyS)]:
                     key = j
-            print('key: ' + str(key))
+            # prints ascii of letter (TESTING PURPOSES)
+            #print('key: ' + str(key))
 
             cipher = (plain + key) % 29 # encryption algorithm
             
@@ -41,7 +41,7 @@ class Vigenere:
         #return letter value of asciiLetters[c]
 
     # y = c - k mod 29
-    def decrypt(cipherT, keyS):
+    def decrypt(cipherT, keyS, asciiLetters):
 
         cipherT = cipherT.upper() # makes ciphertext all uppercase
         keyS = keyS.upper() # makes key all uppercase
@@ -58,12 +58,14 @@ class Vigenere:
             for i in range(29): # gets ascii numeric for plaintext
                 if asciiLetters[i] == cipherT[letter]:
                     cipher = i
-            print('cipher: ' + str(cipher))
+            # prints ascii of letter (TESTING PURPOSES)
+            #print('cipher: ' + str(cipher))
             
             for j in range(29): # gets ascii numeric for key
                 if asciiLetters[j] == keyS[letter % len(keyS)]:
                     key = j
-            print('key: ' + str(key))
+            # prints ascii of letter (TESTING PURPOSES)
+            #print('key: ' + str(key))
 
             plain = (cipher - key) % 29 # decryption algorithm
             
