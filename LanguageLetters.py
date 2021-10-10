@@ -22,5 +22,5 @@ class LanguageLetters:
     print(file)
     newText.close()
     text.close()
-    #return file    
+    return file    
       
