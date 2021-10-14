@@ -8,6 +8,7 @@ from LanguageLetters import LanguageLetters
 
 class KeyFinder:
 
+
     def main(fileName,keyLength):
 
 
@@ -16,15 +17,14 @@ class KeyFinder:
         originalSplit = original[0:50] # take only the first 50 char 
         print("\n"+originalSplit)
 
-        for i in range(keyLength): #print sequence and shift i spaces 
-            print("Sequence",i,originalSplit[i:] +originalSplit[:i])
-         
-
-
-        #need to calculate IC
+ #need to calculate IC
+        for i in range (keyLength):
+                print("If key length were: ",i)
+                for j in range (i+1): #print sequence and shift i spaces 
+                    print("Sequence",j,originalSplit[j:] +originalSplit[:j])
+                    
+            
 
         return originalSplit
-
-
-
-
+        
+   
