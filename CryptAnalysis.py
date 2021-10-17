@@ -7,7 +7,7 @@ from LanguageLetters import LanguageLetters
 
 class CryptAnalysis:
 
-    '''def letterCounter(string, alphabet):
+    def letterCounter(string, alphabet):
 
         # creates array for counter for letters and array for probabilities of letters
         letterCount = [0] * 29    
@@ -27,7 +27,7 @@ class CryptAnalysis:
 
         for j in range(29): # loops to calculate and print probabilities
             letterProb[j] = (lettCount[j] / len(string)) * 100
-            print(str(alphabet[j]) + ': ' + str("{:.4f}".format(letterProb[j])) + "\t" + alphabet[j] + ': ' + str("{:.4f}".format(probAlphab[j])))'''
+            print(str(alphabet[j]) + ': ' + str("{:.4f}".format(letterProb[j])) + "\t" + alphabet[j] + ': ' + str("{:.4f}".format(probAlphab[j])))
  
 
     def branchString(fileName, key): # TODO: EDIT TO BE KEY
