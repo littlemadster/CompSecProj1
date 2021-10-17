@@ -3,9 +3,11 @@ Project 1
 Maddie Sirok & Valentina Colorado
 """
 
+from LanguageLetters import LanguageLetters
+
 class CryptAnalysis:
 
-    def letterCounter(string, alphabet):
+    '''def letterCounter(string, alphabet):
 
         # creates array for counter for letters and array for probabilities of letters
         letterCount = [0] * 29    
@@ -25,7 +27,7 @@ class CryptAnalysis:
 
         for j in range(29): # loops to calculate and print probabilities
             letterProb[j] = (lettCount[j] / len(string)) * 100
-            print(str(alphabet[j]) + ': ' + str("{:.4f}".format(letterProb[j])) + "\t" + alphabet[j] + ': ' + str("{:.4f}".format(probAlphab[j])))
+            print(str(alphabet[j]) + ': ' + str("{:.4f}".format(letterProb[j])) + "\t" + alphabet[j] + ': ' + str("{:.4f}".format(probAlphab[j])))'''
  
 
     def branchString(fileName, key): # TODO: EDIT TO BE KEY
@@ -35,6 +37,7 @@ class CryptAnalysis:
         original = LanguageLetters.openFile(fileName)
         fileName = original[0:50] # take only the first 50 char 
         print("\n"+fileName + "\n")
+        branchedString = []
         
         if keyLength == 1:
             print("Key Length = 1:")
@@ -43,7 +46,8 @@ class CryptAnalysis:
             
             for i in range(0, keyLength):
                 string1 = fileName
-            print(string1)
+
+            branchedStrings.append(string1)
 
         if keyLength == 2:
             print("Key Length = 2:")
@@ -54,9 +58,9 @@ class CryptAnalysis:
             for i in range(0, keyLength, 2):
                 string1 = fileName[i::i+2]
                 string2 = fileName[i+1::i+2]
-                
-            print(string1)
-            print(string2)
+
+            branchedString.append(string1)
+            branchedString.append(string2)
                 
         if keyLength == 3:
             print("Key Length = 3:")
@@ -69,10 +73,10 @@ class CryptAnalysis:
                 string1 = fileName[i::i+3]
                 string2 = fileName[i+1::i+3]
                 string3 = fileName[i+2::i+3]
-                
-            print(string1)
-            print(string2)
-            print(string3)
+
+            branchedString.append(string1)
+            branchedString.append(string2)
+            branchedString.append(string3)
             
 
         if keyLength == 4:
@@ -88,11 +92,11 @@ class CryptAnalysis:
                 string2 = fileName[i+1::i+4]
                 string3 = fileName[i+2::i+4]
                 string4 = fileName[i+3::i+4]
-                
-            print(string1)
-            print(string2)
-            print(string3)
-            print(string4)
+
+            branchedString.append(string1)
+            branchedString.append(string2)
+            branchedString.append(string3)
+            branchedString.append(string4)
 
         if keyLength == 5:
             print("Key Length = 5:")
@@ -109,9 +113,14 @@ class CryptAnalysis:
                 string3 = fileName[i+2::i+5]
                 string4 = fileName[i+3::i+5]
                 string5 = fileName[i+4::i+5]
-                
-            print(string1)
-            print(string2)
-            print(string3)
-            print(string4)
-            print(string5)
+
+            branchedString.append(string1)
+            branchedString.append(string2)
+            branchedString.append(string3)
+            branchedString.append(string4)
+            branchedString.append(string5)
+
+    
+
+
+        return branchedString
