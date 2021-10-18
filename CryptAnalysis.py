@@ -23,21 +23,21 @@ class CryptAnalysis:
 
     def printProb(string, alphabet, probAlphab): # takes string, alphabet, probability table, and size of key (int)
 
-        lettCount = letterCounter(string, alphabet)
+        lettCount = CryptAnalysis.letterCounter(string, alphabet)
+        letterProb = [0] * 29
 
         for j in range(29): # loops to calculate and print probabilities
             letterProb[j] = (lettCount[j] / len(string)) * 100
             print(str(alphabet[j]) + ': ' + str("{:.4f}".format(letterProb[j])) + "\t" + alphabet[j] + ': ' + str("{:.4f}".format(probAlphab[j])))
  
 
-    def branchString(fileName, key): # TODO: EDIT TO BE KEY
+    def branchString(fileName, keyLength): # TODO: EDIT TO BE KEY
 
-        keyLength = len(key)
+        keyLength = keyLength
 
-        original = LanguageLetters.openFile(fileName)
-        fileName = original[0:50] # take only the first 50 char 
+        fileName = LanguageLetters.openFile(fileName)
         print("\n"+fileName + "\n")
-        branchedString = []
+        branchedString = [] * keyLength
         
         if keyLength == 1:
             print("Key Length = 1:")
@@ -47,7 +47,7 @@ class CryptAnalysis:
             for i in range(0, keyLength):
                 string1 = fileName
 
-            branchedStrings.append(string1)
+            branchedString.append(string1)
 
         if keyLength == 2:
             print("Key Length = 2:")
