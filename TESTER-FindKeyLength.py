@@ -25,7 +25,7 @@ def main():
         for k in range(len(branchFile)):
             print(branchFile[k])
 
-        for j in range(1, branchesNum):
+        for j in range(0, branchesNum):
             CryptAnalysis.printProb(branchFile[j], asciiLetters, asciiProb)
 
     
