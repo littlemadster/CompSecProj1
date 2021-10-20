@@ -4,6 +4,7 @@ Maddie Sirok & Valentina Colorado
 """
 
 from LanguageLetters import LanguageLetters
+import math
 
 class CryptAnalysis:
 
@@ -29,7 +30,18 @@ class CryptAnalysis:
         for j in range(29): # loops to calculate and print probabilities
             letterProb[j] = (lettCount[j] / len(string)) * 100
             print(str(alphabet[j]) + ': ' + str("{:.4f}".format(letterProb[j])) + "\t" + alphabet[j] + ': ' + str("{:.4f}".format(probAlphab[j])))
- 
+        print('\n')
+        
+
+    def calcProb(string, alphabet): # takes string and alphabet
+
+        lettCount = CryptAnalysis.letterCounter(string, alphabet)
+        letterProb = [0] * 29
+
+        for j in range(29): # loops to calculate and print probabilities
+            letterProb[j] = (lettCount[j] / len(string)) * 100
+
+        return letterProb
 
     def branchString(fileName, keyLength): # TODO: EDIT TO BE KEY
 
@@ -120,7 +132,14 @@ class CryptAnalysis:
             branchedString.append(string4)
             branchedString.append(string5)
 
-    
-
-
         return branchedString
+
+    def dist(branches, alphabet, probAlphab): # takes in the branches, asciiLetters, and asciiProb
+
+        distL = 0
+        
+        branProb = CryptAnalysis.calcProb(branches, alphabet, probAlphab)
+
+        for i in range(len(branProb)): # calculate using distance formula
+            
+            
