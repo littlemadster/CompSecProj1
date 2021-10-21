@@ -12,7 +12,7 @@ def main():
 
     plainText = 'COMputERseCURityPrOJEctOnE' #example plain text
 
-    key = 'ValMad' #example key
+    key = 'ValMa' #example key
 
     print("Testing encryption()")
     encryption = VigenereCrypt.encrypt(plainText, key, asciiLetters) #encrypts string
