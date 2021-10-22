@@ -21,29 +21,20 @@ def main():
     fileInput = input("Enter file name: ") #user input for the file name
 
     plaintext = LanguageLetters.openFile(fileInput)    #run LanguageLetters.py
-    smallPT = plaintext[0:200]
 
     #cryptanalysis
 
-    string = plaintext
     print("Testing printProb()")
-    CryptAnalysis.printProb(string, asciiLetters, asciiProb) #prints letter probability
-
-   # print("Testing calcProb()")
-    #print(CryptAnalysis.calcProb(string, asciiLetters)) #prints list of letter probabilities
+    CryptAnalysis.printProb(plaintext, asciiLetters, asciiProb) #prints letter probability
 
     print("Testing branchString()")
     for i in range(6): #for each  key size (1-5)
 
-        branchFile = CryptAnalysis.branchString(string, i) #branches string
+        branchFile = CryptAnalysis.branchString(plaintext, i) #branches string
         branchesNum = len(branchFile) #finds number of branches
-
-        #for k in range(len(branchFile)): 
-         #   print(branchFile[k]) #prints each branch
 
         for j in range(0, branchesNum):
             CryptAnalysis.printProb(branchFile[j], asciiLetters, asciiProb) #letter analysis/print
-
 
 
 
