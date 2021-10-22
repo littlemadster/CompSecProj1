@@ -27,7 +27,6 @@ class LanguageLetters:
     file = LanguageLetters.remove(text.read()) #calls remove function
     print(file, file=newText)           #prints contents of file into new file that stores original file minus the white space
     
-    print(file[0:300])
     newText.close() #close file
     text.close()    #close file
     
