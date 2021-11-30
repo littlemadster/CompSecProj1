@@ -1,4 +1,6 @@
-# Compputer Security Project 2
+# Computer Security Project 2
+
+To run this program the main files needed are located inside of the ``FinalDeliver`` folder
 
 This repo will encrypt and decrypt using the Vigenere Cipher and conduct cryptanalysis to find the key for a given ciphertext. 
 
