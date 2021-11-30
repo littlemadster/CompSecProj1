@@ -1,2 +1,7 @@
-# CompSecProj1
-This is a project for CIS4367 Computer Security. The objective is to create a code that will take an input text to encrypt and decrypt using the Vigenere Cipher. An input for the key by the user will be used to attempt to find the key. The English Language probability of letters is used for cryptanalysis to see if the key is correct.
+# Compputer Security Project 2
+
+This repo will encrypt and decrypt using the Vigenere Cipher and conduct cryptanalysis to find the key for a given ciphertext. 
+
+The technique used includes some automation and calculation by the code and some user input and calculation. Classes were created to include different functions in respect to their ‘theme’ including ‘LanguageLetters,’ ‘CryptAnalysis,’ and ‘VigenereCrypt.’ 
+
+Testing files were created to test each individual class and a combination of the classes. Each class and their tester file will be discussed further in the Classes and Testing Files sections.
